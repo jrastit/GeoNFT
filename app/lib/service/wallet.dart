@@ -15,7 +15,8 @@ final storage = FlutterSecureStorage(aOptions: _getAndroidOptions());
 class NetworkWeb3 {
   Web3Client ethClient;
 
-  static String apiUrl = "http://127.0.0.1:8545"; //Replace with your API
+  static String apiUrl =
+      "https://geonft.fexhu.com/ganache/"; //Replace with your API
 
   static Client httpClient = Client();
 
@@ -45,9 +46,16 @@ class WalletService {
     });
     String? address = localStorage.getString("address") ?? null;
     WalletWeb3? wallet2 = null;
-    wallet2 = items.firstWhere((element) => element.address() == address);
+    if (items.length > 0) {
+      for (var item in items) {
+        if (item.address() == address) {
+          wallet2 = item;
+          break;
+        }
+      }
+    }
     wallet = wallet2;
-    if (wallet == null) {
+    if (wallet == null && items.length > 0) {
       wallet = items[0];
     }
     return items;

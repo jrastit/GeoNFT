@@ -7,7 +7,8 @@
         {
             "name": "geonft",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            
         },
         {
             "name": "geonft (profile mode)",
