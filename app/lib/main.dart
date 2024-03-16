@@ -4,6 +4,7 @@ import 'package:geonft/section/login_section.dart';
 import 'package:geonft/settings/settings_controller.dart';
 import 'package:geonft/settings/settings_service.dart';
 import 'package:geonft/settings/settings_view.dart';
+import 'package:geonft/view/nft_view.dart';
 import 'package:geonft/view/wallet_item_details_view.dart';
 import 'package:geonft/view/wallet_item_list_view.dart';
 import 'package:tekflat_design/tekflat_design.dart';
@@ -109,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
     tabsHeader.add(const Tab(
       icon: Icon(Icons.language),
     ));
-    tabsContent.add(const NFTView());
+    tabsContent.add(NFTView());
 
     if (widget.isMobile) {
       tabsHeader.add(const Tab(
