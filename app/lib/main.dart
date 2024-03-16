@@ -102,9 +102,14 @@ class _MyHomePageState extends State<MyHomePage> {
     List<Widget> tabsContent = [];
 
     tabsHeader.add(const Tab(
-      icon: Icon(Icons.lock),
+      icon: Icon(Icons.wallet),
     ));
     tabsContent.add(const WalletItemListView());
+
+    tabsHeader.add(const Tab(
+      icon: Icon(Icons.language),
+    ));
+    tabsContent.add(const NFTView());
 
     if (widget.isMobile) {
       tabsHeader.add(const Tab(
