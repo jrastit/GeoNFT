@@ -26,6 +26,7 @@ dependencies:
 
   flutter_gen: any
   intl: any
+  shared_preferences: ^2.2.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -2,6 +2,14 @@ import 'dart:math'; //used for the random number generator
 import 'package:http/http.dart'; //You can also import the browser version
 import 'package:geonft/service/my_ether_amount.dart';
 import 'package:web3dart/web3dart.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+AndroidOptions _getAndroidOptions() => const AndroidOptions(
+      encryptedSharedPreferences: true,
+    );
+
+final storage = FlutterSecureStorage(aOptions: _getAndroidOptions());
 
 /// Represents a network connection to a Web3 provider.
 class NetworkWeb3 {
@@ -19,25 +27,72 @@ class NetworkWeb3 {
   NetworkWeb3(this.ethClient);
 }
 
+class WalletService {
+  static WalletWeb3? wallet;
+
+  static getLocalStorage() async {
+    return await SharedPreferences.getInstance();
+  }
+
+  static Future<List<WalletWeb3>> loadItemsFromSecureStorage() async {
+    List<WalletWeb3> items = [];
+    SharedPreferences localStorage = await getLocalStorage();
+    Map<String, String> allValues = await storage.readAll();
+    allValues.forEach((key, value) {
+      if (key.startsWith("wallet_")) {
+        items.add(WalletWeb3.fromJSON(value));
+      }
+    });
+    String? address = localStorage.getString("address") ?? null;
+    WalletWeb3? wallet2 = null;
+    wallet2 = items.firstWhere((element) => element.address() == address);
+    wallet = wallet2;
+    if (wallet == null) {
+      wallet = items[0];
+    }
+    return items;
+  }
+
+  static Future<void> saveItemToSecureStorage(WalletWeb3 wallet) async {
+    await storage.write(
+        key: "wallet_${wallet.address()}", value: wallet.export());
+  }
+}
+
 /// Represents a Web3 wallet.
 class WalletWeb3 {
-  Credentials _wallet;
+  EthPrivateKey _wallet;
 
   /// Creates a [WalletWeb3] instance with a randomly generated key.
   factory WalletWeb3.random() {
-    var rng = Random.secure();
-    Credentials localWallet = EthPrivateKey.createRandom(rng);
+    Random rng = Random.secure();
+    EthPrivateKey localWallet = EthPrivateKey.createRandom(rng);
     return WalletWeb3(localWallet);
   }
 
   /// Creates a [WalletWeb3] instance from a private key.
   factory WalletWeb3.fromPrivateKey(String privateKey) {
-    Credentials localWallet = EthPrivateKey.fromHex(privateKey);
+    EthPrivateKey localWallet = EthPrivateKey.fromHex(privateKey);
+
+    return WalletWeb3(localWallet);
+  }
+
+  factory WalletWeb3.fromJSON(String content) {
+    //TODO: Implement password protection
+    Wallet json_wallet = Wallet.fromJson(content, "password");
+    ;
+    EthPrivateKey localWallet = json_wallet.privateKey;
     return WalletWeb3(localWallet);
   }
 
   WalletWeb3(this._wallet);
 
+  export() {
+    Wallet wallet = Wallet.createNew(_wallet, "password", Random());
+    return wallet.toJson();
+  }
+
+  /// Retrieves the address of the wallet.
   address() {
     return _wallet.address;
   }
