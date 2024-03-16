@@ -1,0 +1,18 @@
+{
+    "title": "Asset Metadata",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "GeoNFT 1"
+        },
+        "description": {
+            "type": "string",
+            "description": "First GeoNFT minted during ETHLondon 2024"
+        },
+        "image": {
+            "type": "string",                   
+            "description": "http://gif6366.free.fr/phpwebgallery/galleries/Tux/thumbnail/tux404.png"
+        }
+    }
+}
