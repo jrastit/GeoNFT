@@ -3,12 +3,12 @@ import 'package:tekflat_design/tekflat_design.dart';
 
 class FormItemTitleWidget extends StatelessWidget {
   const FormItemTitleWidget({
-    Key? key,
+    super.key,
     required this.title,
     this.heightSpace,
     required this.child,
     this.isRequired = false,
-  }) : super(key: key);
+  });
 
   final String title;
   final double? heightSpace;

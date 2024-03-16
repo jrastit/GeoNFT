@@ -2,6 +2,18 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "_fe_analyzer_shared",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-61.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "analyzer",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/analyzer-5.13.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "args",
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/args-2.4.2",
       "packageUri": "lib/",
@@ -18,6 +30,18 @@
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "build",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/build-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "built_mirrors",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/built_mirrors-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "cached_network_image",
@@ -56,6 +80,18 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "color",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/color-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "convert",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/convert-3.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "crypto",
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/crypto-3.0.3",
       "packageUri": "lib/",
@@ -66,6 +102,30 @@
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.6",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "dart_style",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/dart_style-2.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "dartx",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/dartx-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "eip1559",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/eip1559-0.6.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "eip55",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/eip55-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "equatable",
@@ -122,10 +182,16 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "flutter_lints",
-      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/flutter_lints-3.0.1",
+      "name": "flutter_gen",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/flutter_gen-5.4.0",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_gen_core",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/flutter_gen_core-5.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_localizations",
@@ -206,6 +272,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "glob",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/glob-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "http",
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/http-1.2.1",
       "packageUri": "lib/",
@@ -230,6 +302,18 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "json_annotation",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/json_annotation-4.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "json_rpc_2",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/json_rpc_2-3.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "leak_tracker",
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/leak_tracker-10.0.0",
       "packageUri": "lib/",
@@ -246,12 +330,6 @@
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/leak_tracker_testing-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.1"
-    },
-    {
-      "name": "lints",
-      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/lints-3.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
     },
     {
       "name": "local_auth",
@@ -290,6 +368,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "logging",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/logging-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "mask_text_input_formatter",
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/mask_text_input_formatter-2.9.0",
       "packageUri": "lib/",
@@ -314,8 +398,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "mime",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/mime-1.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "octo_image",
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/octo_image-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_config",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/package_config-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -386,6 +482,18 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "pointycastle",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/pointycastle-3.7.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "pub_semver",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/pub_semver-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "pull_to_refresh",
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/pull_to_refresh-2.0.0",
       "packageUri": "lib/",
@@ -402,6 +510,18 @@
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/rxdart-0.27.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "sec",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/sec-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "serializable",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/serializable-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "shared_preferences",
@@ -458,6 +578,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "source_gen",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/source_gen-1.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "source_span",
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/source_span-1.10.0",
       "packageUri": "lib/",
@@ -494,6 +620,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "stream_transform",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/stream_transform-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "string_scanner",
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
@@ -522,6 +654,12 @@
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/test_api-0.6.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "time",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/time-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "top_snackbar_flutter",
@@ -572,10 +710,28 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "wallet",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/wallet-0.0.13",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "watcher",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/watcher-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "web",
       "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/web-0.5.1",
       "packageUri": "lib/",
       "languageVersion": "3.3"
+    },
+    {
+      "name": "web3dart",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/web3dart-2.7.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "win32",
@@ -596,13 +752,19 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "yaml",
+      "rootUri": "file:///Users/jerome.rastit/.pub-cache/hosted/pub.dev/yaml-3.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "geonft",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-03-16T10:17:53.384002Z",
+  "generated": "2024-03-16T12:59:40.947601Z",
   "generator": "pub",
   "generatorVersion": "3.3.1"
 }
