@@ -14,6 +14,10 @@
             "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
             "chainId": "5777"
         },
+        "arbitrum_nova": {
+            "address": "0x92604A186DE35D9c1331596eE8d32c59f64A168F",
+            "chainId": 42170
+        },
         "spicy": {
             "address": "0x864f837ab31D23322D51C6D1EDEB6522CA10DC4a",
             "chainId": 88882

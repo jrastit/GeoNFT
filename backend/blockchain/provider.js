@@ -6,6 +6,9 @@ const fs = require("fs");
 provider = getDefaultProvider("https://polygon-pokt.nodies.app");
 provider = getDefaultProvider("http://localhost:8545");
 provider = getDefaultProvider("https://spicy-rpc.chiliz.com/");
+provider = getDefaultProvider("https://arbitrum-nova.drpc.org");
+// provider = getDefaultProvider("https://nova.arbitrum.io/rpc");
+// provider = getDefaultProvider("https://arbitrum-nova.public.blastapi.io");
 //provider = getDefaultProvider("mainnet");
 const abi = JSON.parse(fs.readFileSync("abi.json"));
 
