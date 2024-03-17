@@ -1,5 +1,6 @@
 const e = require("express");
 const logger = require("logger");
+const { provider, iface, mintTopic, zeroAddress } = require("../blockchain/provider");
 function watchNode(provider) {
     provider.on("block", async (n) => {
         const block = await provider.getBlock(n);
