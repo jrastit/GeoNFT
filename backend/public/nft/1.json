@@ -13,6 +13,10 @@
         "image": {
             "type": "string",                   
             "description": "http://gif6366.free.fr/phpwebgallery/galleries/Tux/thumbnail/tux404.png"
+        },
+        "location": {
+            "type": "string",
+            "description": "51.5074° N, 0.1278° W"
         }
     }
 }
