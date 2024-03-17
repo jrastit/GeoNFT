@@ -1,7 +1,8 @@
+const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const sequelize = require('sequelize');
 const { DataTypes } = require('sequelize');
+const router = express.Router();
 
 
 // Function to write JSON file with NFT metadata
@@ -61,29 +62,6 @@ function updateNFTImage(imagePath, chainId, contractId, nftId) {
     fs.copyFileSync(imagePath, destinationPath);
     
 }
-// Define the NFT model
-const NFT = sequelize.define('NFT', {
-    nftName: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    description: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    position: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    url: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    image: {
-        type: DataTypes.STRING,
-        allowNull: false
-    }
-});
 
 // Usage example
 router.post('/mint', async (req, res) => {
@@ -134,3 +112,5 @@ router.post('/mint', (req, res) => {
     // Send a success response
     res.status(200).json({ message: 'NFT minted successfully!' });
 });
+
+module.exports = router;

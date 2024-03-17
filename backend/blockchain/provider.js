@@ -5,6 +5,7 @@ const { ethers } = require("ethers"); // assuming commonjs
 const fs = require("fs");
 provider = getDefaultProvider("https://polygon-pokt.nodies.app");
 provider = getDefaultProvider("http://localhost:8545");
+provider = getDefaultProvider("https://spicy-rpc.chiliz.com/");
 //provider = getDefaultProvider("mainnet");
 const abi = JSON.parse(fs.readFileSync("abi.json"));
 

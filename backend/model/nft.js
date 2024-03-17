@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database'); // Assuming you have a database configuration file
+const { mySequelize } = require('../server.js'); // Assuming you have a database configuration file
 
-const NFT = sequelize.define('NFT', {
+const NFT = mySequelize.define('NFT', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,

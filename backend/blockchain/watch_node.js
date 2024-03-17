@@ -1,3 +1,4 @@
+const e = require("express");
 const logger = require("logger");
 function watchNode(provider) {
     provider.on("block", async (n) => {
@@ -36,5 +37,9 @@ function watchNode(provider) {
         }
     });
 }
+
+module.exports = {
+    watchNode
+};
 
 

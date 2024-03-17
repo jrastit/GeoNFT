@@ -4,7 +4,7 @@ const cors = require("cors");
 const routes = require('./routes');
 const config = require("./config.json");
 const app = express();
-NFT = require("./model/nft.js").NFT;
+
 
 var corsOptions = {
   origin: "https://geonft.fexhu.com/"
@@ -18,7 +18,6 @@ const sequelize = new Sequelize(config.database.database, config.database.userna
     dialect: 'postgres',
     port: config.database.port, // Add port configuration
 });
-
 
 
 // Synchronize the models with the database
@@ -57,3 +56,7 @@ app.listen(PORT, () => {
 provider = require("./blockchain/provider.js").provider;
 watchNode = require("./blockchain/watch_node.js").watchNode;
 watchNode(provider);
+
+module.exports = {
+  mySequelize: sequelize
+};
