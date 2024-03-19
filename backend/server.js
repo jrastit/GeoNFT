@@ -2,7 +2,10 @@
 const express = require("express");
 const cors = require("cors");
 const routes = require('./routes');
-const config = require("./config.json");
+const sequelize = require('./database');
+const GeoNFT = require('./models/geo_nft');
+const NFT = require('./models/nft');
+const NFTToGeo = require('./models/nft_to_geo');
 const app = express();
 
 
@@ -10,24 +13,10 @@ var corsOptions = {
   origin: "https://geonft.fexhu.com/"
 };
 
-const { Sequelize } = require('sequelize');
-
-// Initialize Sequelize with your database credentials
-const sequelize = new Sequelize(config.database.database, config.database.username, config.database.password, {
-    host: config.database.host,
-    dialect: 'postgres',
-    port: config.database.port, // Add port configuration
-});
-
-
-// Synchronize the models with the database
-sequelize.sync()
-    .then(() => {
-        console.log('NFTs table created successfully.');
-    })
-    .catch((error) => {
-        console.error('Error creating NFTs table:', error);
-    });
+sequelize.sync({ alter: true });
+// NFT.sync({ alter: true });
+// GeoNFT.sync({ alter: true });
+// NFTToGeo.sync({ alter: true });
 
 app.use(cors(corsOptions));
 
@@ -56,7 +45,3 @@ app.listen(PORT, () => {
 provider = require("./blockchain/provider.js").provider;
 watchNode = require("./blockchain/watch_node.js").watchNode;
 watchNode(provider);
-
-module.exports = {
-  mySequelize: sequelize
-};

@@ -1,9 +1,10 @@
 const { getDefaultProvider } = require("ethers/providers");
-const { ethers } = require("ethers"); // assuming commonjs
+const { ethers, JsonRpcProvider, Network } = require("ethers"); // assuming commonjs
 
 
 const fs = require("fs");
-provider = getDefaultProvider("https://polygon-pokt.nodies.app");
+const network = new Network("Polygon", 137);
+provider = new JsonRpcProvider("https://polygon-pokt.nodies.app", network);
 //provider = getDefaultProvider("http://localhost:8545");
 //provider = getDefaultProvider("https://spicy-rpc.chiliz.com/");
 //provider = getDefaultProvider("https://arbitrum-nova.drpc.org");
