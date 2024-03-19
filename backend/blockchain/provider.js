@@ -1,4 +1,3 @@
-const { getDefaultProvider } = require("ethers/providers");
 const { ethers, JsonRpcProvider, Network } = require("ethers"); // assuming commonjs
 
 

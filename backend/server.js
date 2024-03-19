@@ -6,6 +6,7 @@ const sequelize = require('./database');
 const GeoNFT = require('./models/geo_nft');
 const NFT = require('./models/nft');
 const NFTToGeo = require('./models/nft_to_geo');
+const BLOCK = require('./models/block');
 const app = express();
 
 
