@@ -8,11 +8,25 @@ const NFT = require('./models/nft');
 const NFTToGeo = require('./models/nft_to_geo');
 const BLOCK = require('./models/block');
 const app = express();
+var session = require("express-session");
+var SequelizeStore = require("connect-session-sequelize")(session.Store);
+const config = require('./config.js')
 
 
 var corsOptions = {
   origin: "https://geonft.fexhu.com/"
 };
+
+app.use(
+  session({
+    secret: config.session.secret,
+    store: new SequelizeStore({
+      db: sequelize,
+    }),
+    resave: false, // we support the touch method so per the express-session docs this should be set to false
+    proxy: true, // if you do SSL outside of node.
+  })
+);
 
 sequelize.sync({ alter: true });
 // NFT.sync({ alter: true });
@@ -26,6 +40,8 @@ app.use(express.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
+
+
 
 // simple route
 app.get("/", (req, res) => {

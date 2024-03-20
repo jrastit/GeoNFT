@@ -35,7 +35,7 @@ class _WalletItemListViewState extends State<WalletItemListView> {
   }
 
   void loadedItems() {
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(Duration(milliseconds: 10), () {
       WalletService.loadItemsFromSecureStorage().then((value) {
         setState(() {
           items = value;

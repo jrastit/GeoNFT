@@ -1,4 +1,7 @@
 {
+    "session":{
+        "secret":"secret"
+    },
     "application": {
         "name": "GeoNFT"
     },
