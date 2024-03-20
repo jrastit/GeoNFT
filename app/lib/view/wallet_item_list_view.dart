@@ -27,7 +27,7 @@ class _WalletItemListViewState extends State<WalletItemListView> {
       loading = true;
     });
 
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(Duration(milliseconds: 10), () {
       var newWallet = WalletWeb3.random();
       WalletService.saveItemToSecureStorage(newWallet);
       loadedItems();

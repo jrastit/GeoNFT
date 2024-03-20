@@ -1,3 +1,5 @@
+import 'dart:convert';
+import "package:hex/hex.dart";
 import 'dart:math'; //used for the random number generator
 import 'package:http/http.dart'; //You can also import the browser version
 import 'package:geonft/service/my_ether_amount.dart';
@@ -87,17 +89,19 @@ class WalletWeb3 {
 
   factory WalletWeb3.fromJSON(String content) {
     //TODO: Implement password protection
-    Wallet json_wallet = Wallet.fromJson(content, "password");
-    ;
-    EthPrivateKey localWallet = json_wallet.privateKey;
+    //Wallet json_wallet = Wallet.fromJson(content, "password");
+    var walletExport = jsonDecode(content);
+    EthPrivateKey localWallet =
+        EthPrivateKey.fromHex(walletExport['private_key']);
     return WalletWeb3(localWallet);
   }
 
   WalletWeb3(this._wallet);
 
   export() {
-    Wallet wallet = Wallet.createNew(_wallet, "password", Random());
-    return wallet.toJson();
+    //Wallet walletExport = Wallet.createNew(_wallet, "password", Random());
+    var walletExport = {'private_key': HEX.encode(_wallet.privateKey)};
+    return jsonEncode(walletExport);
   }
 
   /// Retrieves the address of the wallet.
