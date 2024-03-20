@@ -15,11 +15,11 @@ function getURI(provider, contractAddress, nftId) {
     });
 }
 
-function mintNft(provider, contractAddress, nftId, uri) {
+async function mintNft(provider, contractAddress, nftId, uri) {
     // Create a new NFT entry in the database
     console.log("Minting NFT:", provider.chainId, contractAddress, nftId);
     NFT.create({
-        chain_id : 137,
+        chain_id : (await provider.getNetwork()).chainId,
         contract_address : contractAddress,
         nft_id : nftId,
         uri : uri.startsWith("data:") ? "data": uri,
@@ -33,11 +33,11 @@ function mintNft(provider, contractAddress, nftId, uri) {
     });
 }
 
-function mintNftError(provider, contractAddress, nftId) {
+async function mintNftError(provider, contractAddress, nftId) {
     // Create a new NFT entry in the database
     console.log("Minting NFT:", provider.chainId, contractAddress, nftId);
     NFT.create({
-        chain_id : 137,
+        chain_id : (await provider.getNetwork()).chainId,
         contract_address : contractAddress,
         nft_id : nftId,
         status : "error",

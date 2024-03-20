@@ -64,7 +64,7 @@ function processBlock(provider, n) {
     provider.getBlock(n).then(async (block) => {
         if (block) {
             result = await BLOCK.create({
-                chain_id: 137,
+                chain_id: (await provider.getNetwork()).chainId,
                 block_id: n,
                 status: "init",
             }).then(async (db_block) => {
@@ -95,7 +95,7 @@ function processBlock(provider, n) {
         } else {
             console.error("Block not found");
             BLOCK.create({
-                chain_id: block.chainId,
+                chain_id: (await provider.getNetwork()).chainId,
                 block_id: n,
                 status: "error",
             })
